@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComicVerse Hub | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/components.css" />
+    <link rel="stylesheet" href="assets/styles/pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="navbar-brand" href="index.html">ComicVerse Hub</a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="comic-detail.html?id=CV-001">Spotlight</a>
+        </nav>
+        <a class="btn btn-secondary" href="cart.html">
+          Cart <span class="badge" data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="badge">Welcome to the multiverse</p>
+            <h1>Discover bold worlds & iconic heroes</h1>
+            <p>
+              Dive into a curated catalog of independent sci-fi, fantasy, and
+              superhero sagas. Everything is powered by modern HTML, CSS, and
+              JavaScript so you can showcase a premium front-end experience
+              without a backend.
+            </p>
+            <ul class="stats" data-hero-stats></ul>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+              <a class="btn btn-primary" href="browse.html">Browse catalog</a>
+              <a class="btn btn-secondary" href="#spotlights"
+                >Publisher spotlights</a
+              >
+            </div>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track" data-carousel-track></div>
+            <div class="carousel-controls">
+              <button
+                class="btn-icon-circle"
+                aria-label="Previous slide"
+                data-carousel-prev
+              >
+                &larr;
+              </button>
+              <button
+                class="btn-icon-circle"
+                aria-label="Next slide"
+                data-carousel-next
+              >
+                &rarr;
+              </button>
+            </div>
+            <div class="pagination-dots" data-carousel-dots></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section new-releases">
+        <div class="container">
+          <div class="section-heading">
+            <h2>New Releases</h2>
+            <a class="btn btn-secondary" href="browse.html">View all</a>
+          </div>
+          <div class="card-grid" data-new-releases></div>
+        </div>
+      </section>
+
+      <section class="section popular">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Popular Series</h2>
+            <a class="btn btn-secondary" href="browse.html">Explore</a>
+          </div>
+          <div class="card-grid" data-popular></div>
+        </div>
+      </section>
+
+      <section class="section" id="spotlights">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Publisher Spotlights</h2>
+            <span class="badge">Direct to your cart</span>
+          </div>
+          <div class="publisher-spotlights" data-publisher-spotlights></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> ComicVerse Hub. Built for the Web Tech
+          Hackathon.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="assets/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComicVerse Hub | Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/components.css" />
+    <link rel="stylesheet" href="assets/styles/pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="navbar-brand" href="index.html">ComicVerse Hub</a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="comic-detail.html?id=CV-001">Spotlight</a>
+        </nav>
+        <a class="btn btn-secondary" href="cart.html">
+          Cart <span class="badge" data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container cart-page">
+          <div class="section-heading">
+            <div>
+              <p class="badge">Your cart</p>
+              <h2>Simulated checkout</h2>
+              <p>
+                Adjust quantities, remove titles, and finish the experience—all
+                offline.
+              </p>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Comic</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody data-cart-body></tbody>
+            </table>
+          </div>
+
+          <div class="catalog-empty" data-cart-empty hidden>
+            <p>
+              Your cart is empty. Discover something new on the
+              <a href="browse.html">browse page</a>.
+            </p>
+          </div>
+
+          <div data-cart-totals hidden></div>
+
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              flex-wrap: wrap;
+              align-items: center;
+            "
+          >
+            <button class="btn btn-primary" data-checkout>Checkout</button>
+            <div class="checkout-message" data-checkout-message></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Persistence powered by localStorage—refresh to see it in action.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/scripts/cart-page.js"></script>
+  </body>
+</html>

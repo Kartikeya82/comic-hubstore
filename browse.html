@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComicVerse Hub | Browse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/components.css" />
+    <link rel="stylesheet" href="assets/styles/pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="navbar-brand" href="index.html">ComicVerse Hub</a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="comic-detail.html?id=CV-001">Spotlight</a>
+        </nav>
+        <a class="btn btn-secondary" href="cart.html">
+          Cart <span class="badge" data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="badge">Catalog</p>
+              <h2>Browse every issue</h2>
+              <p data-filter-summary>All titles</p>
+            </div>
+            <div class="sort-bar">
+              <label>
+                Sort by
+                <select class="select-control" data-sort>
+                  <option value="release-desc">Newest first</option>
+                  <option value="release-asc">Oldest first</option>
+                  <option value="title-az">Title A-Z</option>
+                  <option value="price-asc">Price (Low-High)</option>
+                  <option value="price-desc">Price (High-Low)</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-bar">
+            <input
+              type="search"
+              class="select-control"
+              placeholder="Search title or character"
+              data-search
+              aria-label="Search comics"
+            />
+            <div>
+              <p class="badge">Filter by Publisher</p>
+              <div class="filter-bar" data-filter-publisher></div>
+            </div>
+            <div>
+              <p class="badge">Filter by Genre</p>
+              <div class="filter-bar" data-filter-genre></div>
+            </div>
+          </div>
+
+          <div class="card-grid catalog-grid" data-catalog></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Need help choosing? Email missions@comicverse.dev</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/scripts/browse.js"></script>
+  </body>
+</html>

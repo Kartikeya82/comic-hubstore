@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComicVerse Hub | Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/components.css" />
+    <link rel="stylesheet" href="assets/styles/pages.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="navbar-brand" href="index.html">ComicVerse Hub</a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="comic-detail.html?id=CV-001">Spotlight</a>
+        </nav>
+        <a class="btn btn-secondary" href="cart.html">
+          Cart <span class="badge" data-cart-count>0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container detail-layout" data-detail-root>
+          <div class="detail-cover">
+            <img src="" alt="" data-detail-cover />
+          </div>
+          <div>
+            <p class="badge">Issue Detail</p>
+            <h1 data-detail-title>Loading…</h1>
+            <div class="detail-price" data-detail-price></div>
+            <p data-detail-description></p>
+            <div class="detail-meta" data-detail-meta></div>
+            <button class="btn btn-primary" data-add-to-cart>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>More from this publisher</h2>
+            <a class="btn btn-secondary" href="browse.html">Back to Browse</a>
+          </div>
+          <div class="card-grid" data-related></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>All data lives client-side for lightning-fast demos.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/scripts/comic-detail.js"></script>
+  </body>
+</html>
