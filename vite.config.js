@@ -8,7 +8,8 @@ const htmlInputs = {
   cart: resolve(__dirname, "cart.html"),
 };
 
-export default defineConfig({
+export default defineConfig({export default defineConfig({
+  base: '/comic_verse/',   // REQUIRED FOR GITHUB PAGES
   root: ".",
   server: {
     port: 4173,
@@ -26,3 +27,5 @@ export default defineConfig({
     },
   },
 });
+
+  
