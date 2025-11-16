@@ -10,7 +10,7 @@ export const COMICS = [
     description: "The web-slinger swings into action as Peter Parker faces his greatest challenge yet. With New York City under threat from a mysterious new villain, Spider-Man must balance his personal life with his responsibility as a hero.",
     price: 4.99,
     releaseDate: "2024-01-15",
-    coverImg: "/public/spider-man-swinging-through-new-york-city-at-night.jpg",
+    coverImg: "/comic-hubstore/public/spider-man-swinging-through-new-york-city-at-night.jpg",
     isNew: true,
     isPopular: true,
   },
